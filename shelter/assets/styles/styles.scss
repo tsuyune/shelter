@@ -1,8 +1,9 @@
 :root {
     $color-primary: hsla(25, 69%, 82%, 1);
     $color-primary-light: hsla(25, 93%, 88%, 1);
-    $color-light-xl: hsla(0, 0%, 100%, 1);
     $color-light-s: hsla(0, 0%, 98%, 1);
+    $color-light-l: hsla(0, 0%, 96%, 1);
+    $color-light-xl: hsla(0, 0%, 100%, 1);
     $color-dark-s: hsla(0, 0%, 80%, 1);
     $color-dark-l: hsla(0, 0%, 33%, 1);
     $color-dark-xl: hsla(0, 0%, 30%, 1);
@@ -20,6 +21,8 @@ html {
 *::before,
 *::after {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 .container {
@@ -48,6 +51,30 @@ html {
         radial-gradient(var(--color-gradient-start, hsla(25, 22%, 29%, 1)), var(--color-gradient-end, hsla(330, 3%, 15%, 1)));
 }
 
+.title {
+    margin: 0;
+
+    font-family: "Georgia", sans-serif;
+    font-size: 4.4rem;
+    font-weight: normal;
+    line-height: 1.295;
+    letter-spacing: 0.06em;
+
+    color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
+}
+
+.subtitle {
+    font-size: 3.5rem;
+    line-height: 1.286;
+}
+
+.text {
+    color: var(--color-dark-xl, hsla(0, 0%, 30%, 1));
+
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
 .logo {
     gap: 1rem;
 
@@ -58,10 +85,8 @@ html {
     &__title {
         color: var(--color-primary, hsla(25, 69%, 82%, 1));
 
-        font-family: "Georgia", sans-serif;
         font-size: 3.2rem;
         line-height: 1.094;
-        letter-spacing: 0.06em;
     }
 
     &__subtitle {
@@ -116,25 +141,6 @@ html {
 
 .column {}
 
-.title {
-    max-width: 31rem;
-    margin: 0;
-
-    font-family: "Georgia", sans-serif;
-    font-size: 4.4rem;
-    font-weight: normal;
-    line-height: 1.295;
-
-    color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
-}
-
-.text {
-    color: var(--color-dark-xl, hsla(0, 0%, 30%, 1));
-
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
 .button {
     padding: 1.5rem 4.5rem;
 
@@ -151,6 +157,21 @@ html {
     letter-spacing: 0.06em;
 
     transition: all 0.3s ease-in-out;
+
+    &__outline {
+        padding: 1.3rem 4.3rem;
+
+        outline: 0.2rem solid var(--color-primary, hsla(25, 69%, 82%, 1));
+        background-color: transparent;
+
+        &:hover {
+            outline: 0.2rem solid var(--color-primary-light, hsla(25, 93%, 88%, 1));
+        }
+    }
+
+    &__round {
+        padding: 1rem 1.7rem 1.5rem 1.7rem;
+    }
 
     &:hover {
         cursor: pointer;
@@ -176,6 +197,14 @@ html {
         max-width: 46rem;
     }
 
+    &__title {
+        max-width: 31rem;
+
+        letter-spacing: normal;
+
+        color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+    }
+
     &__text {
         padding: 2.7rem 0;
 
@@ -193,7 +222,7 @@ html {
 
         padding-left: 21.6rem;
         padding-right: 21.4rem;
-        padding-bottom: 1rem;
+        padding-bottom: 10rem;
     }
 
     &__columns {
@@ -209,11 +238,7 @@ html {
     }
 
     &__title {
-        color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
-
-        font-size: 3.5rem;
-        line-height: 1.286;
-        letter-spacing: 0.06em;
+        max-width: 37rem;
     }
 
     &__text {
@@ -221,8 +246,79 @@ html {
     }
 }
 
+.cards {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 9rem;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.arrow {
+    &__left {}
+
+    &__right {}
+}
+
+.card {
+    gap: 3rem;
+    padding-bottom: 3rem;
+
+    border-radius: 0.9rem;
+
+    background-color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {}
+
+    &__title {
+        padding-bottom: 0.2rem;
+
+        font-size: 2rem;
+        line-height: 1.15;
+    }
+
+    &__button {}
+}
+
 .pets {
-    &__container {}
+    background-color: var(--color-light-l, hsla(0, 0%, 96%, 1));
+
+    &__container {
+        padding-top: 8rem;
+        padding-bottom: 10rem;
+
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 6rem;
+    }
+
+    &__title {
+        max-width: 40rem;
+        text-align: center;
+    }
+
+    &__carousel {
+        padding-bottom: 0.2rem;
+    }
+
+    &__cards {}
+
+    &__card {}
+
+    &__button {}
 }
 
 .help {
