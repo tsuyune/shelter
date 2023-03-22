@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%;
+  font-family: "Arial", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 3rem 4rem;
+  width: 128rem;
+  max-width: 128rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2.25rem;
+}
+
+.bg-texture {
+  background: url("../images/texture/bg-texture.png"), radial-gradient(var(--color-gradient-start, hsl(25, 22%, 29%)), var(--color-gradient-end, hsl(330, 3%, 15%)));
+}
+
+.logo {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+.logo__title {
+  color: var(--color-primary, hsl(25, 69%, 82%));
+  font-family: "Georgia", sans-serif;
+  font-size: 3.2rem;
+  line-height: 1.094;
+  letter-spacing: 0.06em;
+}
+.logo__subtitle {
+  padding-left: 0.4rem;
+  color: var(--color-light-xl, hsl(0, 0%, 100%));
+  font-size: 1.3rem;
+  line-height: 1.154;
+  letter-spacing: 0.1em;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+.nav-list__link {
+  color: var(--color-dark-s, hsl(0, 0%, 80%));
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-decoration: none;
+  display: block;
+  padding: 1rem 1.75rem 1.4rem;
+}
+.nav-list__link:focus:active {
+  color: var(--color-light-s, hsl(0, 0%, 98%));
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  max-width: 31rem;
+  margin: 0;
+  font-family: "Georgia", sans-serif;
+  font-size: 4.4rem;
+  font-weight: normal;
+  line-height: 1.295;
+  color: var(--color-light-xl, hsl(0, 0%, 100%));
+}
+
+.text {
+  color: var(--color-dark-xl, hsl(0, 0%, 30%));
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.button {
+  padding: 1.5rem 4.5rem;
+  background-color: var(--color-primary, hsl(25, 69%, 82%));
+  color: var(--color-dark-3xl, hsl(0, 0%, 16%));
+  border: none;
+  outline: none;
+  border-radius: 10rem;
+  font-family: "Georgia", sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.295;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: var(--color-primary-light, hsl(25, 93%, 88%));
+}
+
+.start__container {
+  margin: auto;
+  padding-bottom: 0;
+}
+.start__columns {
+  padding-top: 3rem;
+}
+.start__column {
+  padding-top: 16.3rem;
+  max-width: 46rem;
+}
+.start__text {
+  padding: 2.7rem 0;
+  color: var(--color-dark-s, hsl(0, 0%, 80%));
+}/*# sourceMappingURL=styles.css.map */

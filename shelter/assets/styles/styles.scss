@@ -1,0 +1,206 @@
+:root {
+    $color-primary: hsla(25, 69%, 82%, 1);
+    $color-primary-light: hsla(25, 93%, 88%, 1);
+    $color-light-xl: hsla(0, 0%, 100%, 1);
+    $color-light-s: hsla(0, 0%, 98%, 1);
+    $color-dark-s: hsla(0, 0%, 80%, 1);
+    $color-dark-xl: hsla(0, 0%, 30%, 1);
+    $color-dark-3xl: hsla(0, 0%, 16%, 1);
+    $color-gradient-start: hsla(25, 22%, 29%, 1);
+    $color-gradient-end: hsla(330, 3%, 15%, 1);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Arial", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 3rem 4rem;
+
+    width: 128rem;
+    max-width: 128rem;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-right: 2.25rem;
+    }
+}
+
+.bg-texture {
+    background:
+        url("../images/texture/bg-texture.png"),
+        radial-gradient(var(--color-gradient-start, hsla(25, 22%, 29%, 1)), var(--color-gradient-end, hsla(330, 3%, 15%, 1)));
+}
+
+.logo {
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+    &__title {
+        color: var(--color-primary, hsla(25, 69%, 82%, 1));
+
+        font-family: "Georgia", sans-serif;
+        font-size: 3.2rem;
+        line-height: 1.094;
+        letter-spacing: 0.06em;
+    }
+
+    &__subtitle {
+        padding-left: 0.4rem;
+
+        color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+
+        font-size: 1.3rem;
+        line-height: 1.154;
+        letter-spacing: 0.1em;
+    }
+}
+
+.nav {
+    &-list {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+
+        list-style: none;
+
+        &__item {}
+
+        &__link {
+            color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+
+            font-size: 1.5rem;
+            line-height: 1.6;
+
+            text-decoration: none;
+            display: block;
+
+            padding: 1rem 1.75rem 1.4rem;
+        }
+
+        &__link:focus:active {
+            color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+        }
+    }
+}
+
+.main {
+    &__container {}
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {}
+
+.title {
+    max-width: 31rem;
+    margin: 0;
+
+    font-family: "Georgia", sans-serif;
+    font-size: 4.4rem;
+    font-weight: normal;
+    line-height: 1.295;
+
+    color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+}
+
+.text {
+    color: var(--color-dark-xl, hsla(0, 0%, 30%, 1));
+
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.button {
+    padding: 1.5rem 4.5rem;
+
+    background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
+    color: var(--color-dark-3xl, hsla(0, 0%, 16%, 1));
+
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+
+    font-family: "Georgia", sans-serif;
+    font-size: 1.7rem;
+    line-height: 1.295;
+    letter-spacing: 0.06em;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+
+        background-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
+    }
+}
+
+.start {
+    &__container {
+        margin: auto;
+
+        padding-bottom: 0;
+    }
+
+    &__columns {
+        padding-top: 3rem;
+    }
+
+    &__column {
+        padding-top: 16.3rem;
+
+        max-width: 46rem;
+    }
+
+    &__text {
+        padding: 2.7rem 0;
+
+        color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+    }
+
+    &__button {}
+
+    &__img {}
+}
+
+.about {
+    &__container {}
+}
+
+.pets {
+    &__container {}
+}
+
+.help {
+    &__container {}
+}
+
+.donation {
+    &__container {}
+}
+
+.footer {
+    &__container {}
+}
