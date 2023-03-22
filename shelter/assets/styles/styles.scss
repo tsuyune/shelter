@@ -4,6 +4,7 @@
     $color-light-xl: hsla(0, 0%, 100%, 1);
     $color-light-s: hsla(0, 0%, 98%, 1);
     $color-dark-s: hsla(0, 0%, 80%, 1);
+    $color-dark-l: hsla(0, 0%, 33%, 1);
     $color-dark-xl: hsla(0, 0%, 30%, 1);
     $color-dark-3xl: hsla(0, 0%, 16%, 1);
     $color-gradient-start: hsla(25, 22%, 29%, 1);
@@ -110,6 +111,7 @@ html {
 .columns {
     display: flex;
     justify-content: space-between;
+    align-items: start;
 }
 
 .column {}
@@ -186,7 +188,37 @@ html {
 }
 
 .about {
-    &__container {}
+    &__container {
+        margin: auto;
+
+        padding-left: 21.6rem;
+        padding-right: 21.4rem;
+        padding-bottom: 1rem;
+    }
+
+    &__columns {
+        padding-top: 5rem;
+    }
+
+    &__img {}
+
+    &__column {
+        padding-top: 1.5rem;
+
+        max-width: 43rem;
+    }
+
+    &__title {
+        color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
+
+        font-size: 3.5rem;
+        line-height: 1.286;
+        letter-spacing: 0.06em;
+    }
+
+    &__text {
+        padding-top: 0.9rem;
+    }
 }
 
 .pets {

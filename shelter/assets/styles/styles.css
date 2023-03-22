@@ -72,6 +72,7 @@ html {
 .columns {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 
 .title {
@@ -122,4 +123,26 @@ html {
 .start__text {
   padding: 2.7rem 0;
   color: var(--color-dark-s, hsl(0, 0%, 80%));
+}
+.about__container {
+  margin: auto;
+  padding-left: 21.6rem;
+  padding-right: 21.4rem;
+  padding-bottom: 1rem;
+}
+.about__columns {
+  padding-top: 5rem;
+}
+.about__column {
+  padding-top: 1.5rem;
+  max-width: 43rem;
+}
+.about__title {
+  color: var(--color-dark-l, hsl(0, 0%, 33%));
+  font-size: 3.5rem;
+  line-height: 1.286;
+  letter-spacing: 0.06em;
+}
+.about__text {
+  padding-top: 0.9rem;
 }/*# sourceMappingURL=styles.css.map */
