@@ -12,6 +12,7 @@ html {
 }
 
 .container {
+  margin: auto;
   padding: 3rem 4rem;
   width: 128rem;
   max-width: 128rem;
@@ -96,6 +97,11 @@ html {
   align-items: start;
 }
 
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
 .button {
   padding: 1.5rem 4.5rem;
   background-color: var(--color-primary, hsl(25, 69%, 82%));
@@ -126,7 +132,6 @@ html {
 }
 
 .start__container {
-  margin: auto;
   padding-bottom: 0;
 }
 .start__columns {
@@ -146,7 +151,6 @@ html {
   color: var(--color-dark-s, hsl(0, 0%, 80%));
 }
 .about__container {
-  margin: auto;
   padding-left: 21.6rem;
   padding-right: 21.4rem;
   padding-bottom: 10rem;
@@ -192,7 +196,6 @@ html {
 .pets__container {
   padding-top: 8rem;
   padding-bottom: 10rem;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,9 +220,8 @@ html {
 }
 .help__container {
   padding-top: 8rem;
-  padding-bottom: 3.6rem;
+  padding-bottom: 10rem;
   gap: 6rem;
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -229,11 +231,53 @@ html {
   text-align: center;
 }
 .help__cards {
-  gap: 5.5rem 12rem;
+  gap: 5.2rem 11.9rem;
   justify-content: center;
   align-content: space-between;
   flex-wrap: wrap;
 }
 .help__card {
   gap: 3rem;
+}
+
+.donation {
+  background-color: var(--color-light-l, hsl(0, 0%, 96%));
+}
+.donation__container {
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+}
+.donation__columns {
+  gap: 6rem 3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+.donation__column {
+  max-width: 38rem;
+  gap: 1.9rem;
+  align-items: start;
+}
+.donation__title {
+  max-width: 30rem;
+}
+.donation__subtitle {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.donation__text {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--color-dark-m, hsl(0, 0%, 70%));
+  font-style: italic;
+}
+
+.credit-card {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border-radius: 0.9rem;
+  background-color: var(--color-primary, hsl(25, 69%, 82%));
 }/*# sourceMappingURL=styles.css.map */

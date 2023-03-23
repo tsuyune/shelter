@@ -5,6 +5,7 @@
     $color-light-l: hsla(0, 0%, 96%, 1);
     $color-light-xl: hsla(0, 0%, 100%, 1);
     $color-dark-s: hsla(0, 0%, 80%, 1);
+    $color-dark-m: hsla(0, 0%, 70%, 1);
     $color-dark-l: hsla(0, 0%, 33%, 1);
     $color-dark-xl: hsla(0, 0%, 30%, 1);
     $color-dark-3xl: hsla(0, 0%, 16%, 1);
@@ -26,6 +27,7 @@ html {
 }
 
 .container {
+    margin: auto;
     padding: 3rem 4rem;
 
     width: 128rem;
@@ -139,7 +141,10 @@ html {
     align-items: start;
 }
 
-.column {}
+.column {
+    display: flex;
+    flex-direction: column;
+}
 
 .button {
     padding: 1.5rem 4.5rem;
@@ -182,8 +187,6 @@ html {
 
 .start {
     &__container {
-        margin: auto;
-
         padding-bottom: 0;
     }
 
@@ -218,8 +221,6 @@ html {
 
 .about {
     &__container {
-        margin: auto;
-
         padding-left: 21.6rem;
         padding-right: 21.4rem;
         padding-bottom: 10rem;
@@ -289,7 +290,6 @@ html {
         padding-top: 8rem;
         padding-bottom: 10rem;
 
-        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -327,11 +327,10 @@ html {
 .help {
     &__container {
         padding-top: 8rem;
-        padding-bottom: 3.6rem;
+        padding-bottom: 10rem;
 
         gap: 6rem;
 
-        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -343,7 +342,7 @@ html {
     }
 
     &__cards {
-        gap: 5.5rem 12rem;
+        gap: 5.2rem 11.9rem;
 
         justify-content: center;
         align-content: space-between;
@@ -356,7 +355,63 @@ html {
 }
 
 .donation {
-    &__container {}
+    background-color: var(--color-light-l, hsla(0, 0%, 96%, 1));
+
+    &__container {
+        padding-top: 8rem;
+        padding-bottom: 10rem;
+    }
+
+    &__img {}
+
+    &__columns {
+        gap: 6rem 3rem;
+
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    &__column {
+        max-width: 38rem;
+
+        gap: 1.9rem;
+
+        align-items: start;
+    }
+
+    &__title {
+        max-width: 30rem;
+    }
+
+    &__subtitle {
+        font-size: 1.5rem;
+        line-height: 1.1;
+    }
+
+    &__text {
+        margin: 0;
+
+        font-size: 1.2rem;
+        line-height: 1.5;
+
+        color: var(--color-dark-m, hsla(0, 0%, 70%, 1));
+        font-style: italic;
+    }
+}
+
+.credit-card {
+    padding: 1rem 1.5rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    border-radius: 0.9rem;
+
+    background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
+
+    &__icon {}
 }
 
 .footer {
