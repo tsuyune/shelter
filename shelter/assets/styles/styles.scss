@@ -248,9 +248,6 @@ html {
 
 .cards {
     display: flex;
-    justify-content: space-between;
-
-    gap: 9rem;
 }
 
 .carousel {
@@ -267,13 +264,6 @@ html {
 }
 
 .card {
-    gap: 3rem;
-    padding-bottom: 3rem;
-
-    border-radius: 0.9rem;
-
-    background-color: var(--color-light-s, hsla(0, 0%, 98%, 1));
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -288,6 +278,8 @@ html {
     }
 
     &__button {}
+
+    &__icon {}
 }
 
 .pets {
@@ -314,15 +306,53 @@ html {
         padding-bottom: 0.2rem;
     }
 
-    &__cards {}
+    &__cards {
+        gap: 9rem;
 
-    &__card {}
+        justify-content: space-between;
+    }
+
+    &__card {
+        gap: 3rem;
+        padding-bottom: 3rem;
+
+        border-radius: 0.9rem;
+
+        background-color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+    }
 
     &__button {}
 }
 
 .help {
-    &__container {}
+    &__container {
+        padding-top: 8rem;
+        padding-bottom: 3.6rem;
+
+        gap: 6rem;
+
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        max-width: 31rem;
+        text-align: center;
+    }
+
+    &__cards {
+        gap: 5.5rem 12rem;
+
+        justify-content: center;
+        align-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        gap: 3rem;
+    }
 }
 
 .donation {

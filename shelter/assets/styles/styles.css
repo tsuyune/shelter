@@ -167,8 +167,6 @@ html {
 
 .cards {
   display: flex;
-  justify-content: space-between;
-  gap: 9rem;
 }
 
 .carousel {
@@ -179,10 +177,6 @@ html {
 }
 
 .card {
-  gap: 3rem;
-  padding-bottom: 3rem;
-  border-radius: 0.9rem;
-  background-color: var(--color-light-s, hsl(0, 0%, 98%));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,4 +204,36 @@ html {
 }
 .pets__carousel {
   padding-bottom: 0.2rem;
+}
+.pets__cards {
+  gap: 9rem;
+  justify-content: space-between;
+}
+.pets__card {
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0.9rem;
+  background-color: var(--color-light-s, hsl(0, 0%, 98%));
+}
+.help__container {
+  padding-top: 8rem;
+  padding-bottom: 3.6rem;
+  gap: 6rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.help__title {
+  max-width: 31rem;
+  text-align: center;
+}
+.help__cards {
+  gap: 5.5rem 12rem;
+  justify-content: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.help__card {
+  gap: 3rem;
 }/*# sourceMappingURL=styles.css.map */
