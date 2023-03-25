@@ -90,6 +90,10 @@ html {
 
         font-size: 3.2rem;
         line-height: 1.094;
+
+        &_white-ver {
+            color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
+        }
     }
 
     &__subtitle {
@@ -100,6 +104,10 @@ html {
         font-size: 1.3rem;
         line-height: 1.154;
         letter-spacing: 0.1em;
+
+        &_white-ver {
+            color: var(--color-dark-3xl, hsla(0, 0%, 16%, 1));
+        }
     }
 }
 
@@ -124,10 +132,22 @@ html {
             display: block;
 
             padding: 1rem 1.75rem 1.4rem;
-        }
 
-        &__link:focus:active {
-            color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+            &:focus:active {
+                color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+            }
+
+            &_white-ver {
+                color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
+
+                &:hover {
+                    color: var(--color-dark-3xl, hsla(0, 0%, 16%, 1));
+                }
+
+                &:focus:active {
+                    color: inherit;
+                }
+            }
         }
     }
 }
@@ -139,7 +159,7 @@ html {
 .columns {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .column {
@@ -150,11 +170,12 @@ html {
 .button {
     padding: 1.5rem 4.5rem;
 
+    border: none;
+
     background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
+    outline: 0.2rem solid var(--color-primary, hsla(25, 69%, 82%, 1));
     color: var(--color-dark-3xl, hsla(0, 0%, 16%, 1));
 
-    border: none;
-    outline: none;
     border-radius: 10rem;
 
     font-family: "Georgia", sans-serif;
@@ -169,20 +190,26 @@ html {
 
         outline: 0.2rem solid var(--color-primary, hsla(25, 69%, 82%, 1));
         background-color: transparent;
-
-        &:hover {
-            outline: 0.2rem solid var(--color-primary-light, hsla(25, 93%, 88%, 1));
-        }
     }
 
     &__round {
-        padding: 1rem 1.7rem 1.5rem 1.7rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        padding: 1rem;
+
+        border-radius: 50%;
     }
 
-    &:hover {
+    &[disabled] {
+        outline-color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+        color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+    }
+
+    &:hover:not(&[disabled]) {
         cursor: pointer;
 
         background-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
+        outline-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
     }
 }
 
@@ -200,7 +227,7 @@ html {
 
         max-width: 46rem;
 
-        align-items: start;
+        align-items: flex-start;
     }
 
     &__title {
@@ -286,6 +313,18 @@ html {
     &__icon {}
 }
 
+.pagination {
+    gap: 2.4rem;
+
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        margin-top: 0.4rem;
+        margin-bottom: 0.2rem;
+    }
+}
+
 .pets {
     background-color: var(--color-light-l, hsla(0, 0%, 96%, 1));
 
@@ -298,6 +337,12 @@ html {
         align-items: center;
 
         gap: 6rem;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(27rem, 1fr));
+        gap: 3.2rem 4rem;
     }
 
     &__title {
@@ -380,7 +425,7 @@ html {
 
         gap: 1.9rem;
 
-        align-items: start;
+        align-items: flex-start;
     }
 
     &__title {
