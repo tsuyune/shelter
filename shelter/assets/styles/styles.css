@@ -119,10 +119,11 @@ html {
 }
 
 .button {
-  padding: 1.5rem 4.5rem;
+  padding: 1.3rem 4.3rem;
+  text-align: center;
   border: none;
   background-color: var(--color-primary, hsl(25, 69%, 82%));
-  outline: 0.2rem solid var(--color-primary, hsl(25, 69%, 82%));
+  border: 0.2rem solid var(--color-primary, hsl(25, 69%, 82%));
   color: var(--color-dark-3xl, hsl(0, 0%, 16%));
   border-radius: 10rem;
   font-family: "Georgia", sans-serif;
@@ -132,24 +133,25 @@ html {
   transition: all 0.3s ease-in-out;
 }
 .button__outline {
-  padding: 1.3rem 4.3rem;
-  outline: 0.2rem solid var(--color-primary, hsl(25, 69%, 82%));
+  border: 0.2rem solid var(--color-primary, hsl(25, 69%, 82%));
   background-color: transparent;
 }
 .button__round {
-  width: 4.8rem;
-  height: 4.8rem;
+  width: 5.2rem;
+  height: 5.2rem;
   padding: 1rem;
+  display: grid;
+  place-items: center;
   border-radius: 50%;
 }
 .button[disabled] {
-  outline-color: var(--color-dark-s, hsl(0, 0%, 80%));
+  border-color: var(--color-dark-s, hsl(0, 0%, 80%));
   color: var(--color-dark-s, hsl(0, 0%, 80%));
 }
 .button:hover:not(.button[disabled]) {
   cursor: pointer;
   background-color: var(--color-primary-light, hsl(25, 93%, 88%));
-  outline-color: var(--color-primary-light, hsl(25, 93%, 88%));
+  border-color: var(--color-primary-light, hsl(25, 93%, 88%));
 }
 
 .start__container {
@@ -169,7 +171,8 @@ html {
   color: var(--color-light-xl, hsl(0, 0%, 100%));
 }
 .start__text {
-  padding: 2.7rem 0;
+  margin-top: 4rem;
+  margin-bottom: 4.4rem;
   color: var(--color-dark-s, hsl(0, 0%, 80%));
 }
 .about__container {
@@ -213,15 +216,10 @@ html {
   line-height: 1.15;
 }
 .pagination {
-  gap: 2.4rem;
+  gap: 2rem;
   display: flex;
   justify-content: center;
 }
-.pagination__container {
-  margin-top: 0.4rem;
-  margin-bottom: 0.2rem;
-}
-
 .pets {
   background-color: var(--color-light-l, hsl(0, 0%, 96%));
 }
@@ -236,21 +234,18 @@ html {
 .pets__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(27rem, 1fr));
-  gap: 3.2rem 4rem;
+  gap: 3.1rem 4rem;
 }
 .pets__title {
   max-width: 40rem;
   text-align: center;
-}
-.pets__carousel {
-  padding-bottom: 0.2rem;
 }
 .pets__cards {
   gap: 9rem;
   justify-content: space-between;
 }
 .pets__card {
-  gap: 3rem;
+  gap: 2.9rem;
   padding-bottom: 3rem;
   border-radius: 0.9rem;
   background-color: var(--color-light-s, hsl(0, 0%, 98%));
@@ -299,6 +294,7 @@ html {
   max-width: 30rem;
 }
 .donation__subtitle {
+  margin-bottom: 0.2rem;
   font-size: 1.5rem;
   line-height: 1.1;
 }
