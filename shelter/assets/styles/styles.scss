@@ -43,8 +43,6 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        padding-right: 2.25rem;
     }
 }
 
@@ -117,12 +115,14 @@ html {
         padding: 0;
 
         display: flex;
+        gap: 3.6rem;
 
         list-style: none;
 
         &__item {}
 
         &__link {
+            position: relative;
             color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
 
             font-size: 1.5rem;
@@ -131,20 +131,39 @@ html {
             text-decoration: none;
             display: block;
 
-            padding: 1rem 1.75rem 1.4rem;
+            padding-bottom: 0.4rem;
 
-            &:focus:active {
+            &:not(.nav-list__link_active):focus:active {
                 color: var(--color-light-s, hsla(0, 0%, 98%, 1));
             }
+
+            &_active {
+                cursor: default;
+                pointer-events: none;
+
+                &::after {
+                    content: "";
+
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+
+                    width: 100%;
+                    height: 0.3rem;
+                    background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
+                }
+            }
+
+
 
             &_white-ver {
                 color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
 
-                &:hover {
+                &:not(.nav-list__link_active):hover {
                     color: var(--color-dark-3xl, hsla(0, 0%, 16%, 1));
                 }
 
-                &:focus:active {
+                &:not(.nav-list__link_active):focus:active {
                     color: inherit;
                 }
             }
@@ -247,7 +266,9 @@ html {
         color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
     }
 
-    &__button {}
+    &__button {
+        text-decoration: none;
+    }
 
     &__img {}
 }
@@ -367,7 +388,9 @@ html {
         background-color: var(--color-light-s, hsla(0, 0%, 98%, 1));
     }
 
-    &__button {}
+    &__button {
+        text-decoration: none;
+    }
 }
 
 .help {
@@ -405,7 +428,7 @@ html {
 
     &__container {
         padding-top: 8rem;
-        padding-bottom: 10rem;
+        padding-bottom: 9.9rem;
     }
 
     &__img {}
@@ -421,7 +444,7 @@ html {
     &__column {
         max-width: 38rem;
 
-        gap: 1.9rem;
+        gap: 2rem;
 
         align-items: flex-start;
     }
@@ -431,8 +454,6 @@ html {
     }
 
     &__subtitle {
-        margin-bottom: 0.2rem;
-
         font-size: 1.5rem;
         line-height: 1.1;
     }
@@ -460,6 +481,12 @@ html {
     text-decoration: none;
 
     background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
+    }
 
     &__icon {}
 }
@@ -491,7 +518,7 @@ html {
         }
     }
 
-    &__elem {
+    &__link {
         gap: 2rem;
 
         display: flex;
@@ -500,6 +527,16 @@ html {
         color: var(--color-primary, hsla(25, 69%, 82%, 1));
 
         text-decoration: none;
+
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            color: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+
+            .footer__icon>path {
+                fill: var(--color-dark-s, hsla(0, 0%, 80%, 1));
+            }
+        }
     }
 
     &__title {
@@ -513,6 +550,10 @@ html {
 
     &__icon {
         flex-shrink: 0;
+
+        &>path {
+            transition: all 0.3s ease-in-out;
+        }
     }
 
     &__img {}

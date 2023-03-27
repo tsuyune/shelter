@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
     <link rel="stylesheet" href="assets/styles/normalize.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
@@ -19,8 +23,9 @@
             </a>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="#about" class="nav-list__link">About the shelter</a></li>
-                    <li class="nav-list__item"><a href="#pets" class="nav-list__link">Our pets</a></li>
+                    <li class="nav-list__item"><a href="#" class="nav-list__link nav-list__link_active">About the
+                            shelter</a></li>
+                    <li class="nav-list__item"><a href="pets.html" class="nav-list__link">Our pets</a></li>
                     <li class="nav-list__item"><a href="#help" class="nav-list__link">Help the shelter</a></li>
                     <li class="nav-list__item"><a href="#contacts" class="nav-list__link">Contacts</a></li>
                 </ul>
@@ -37,13 +42,13 @@
                             <p class="text start__text">We offer to give a chance to a little and nice puppy with an
                                 extremely wide and open heart. He or she will love you more than anybody else in the
                                 world, you will see!</p>
-                            <button class="button start__button">Make a friend</button>
+                            <a class="button start__button" href="#our-friends">Make a friend</a>
                         </div>
                         <img class="start__img" src="assets/images/start/puppy.png" alt="Beagle looks up">
                     </div>
                 </div>
             </section>
-            <section id="about" class="about">
+            <section class="about">
                 <div class="container about__container">
                     <div class="columns about__columns">
                         <img src="assets/images/about/pets.png" alt="A cat and a dog are sitting" class="about__img">
@@ -64,7 +69,7 @@
                     </div>
                 </div>
             </section>
-            <section id="pets" class="pets">
+            <section id="our-friends" class="pets">
                 <div class="container pets__container">
                     <h2 class="title subtitle pets__title">Our friends who are&nbsp;looking for a house</h2>
                     <div class="carousel pets__carousel">
@@ -98,7 +103,7 @@
                             </svg>
                         </button>
                     </div>
-                    <button class="button pets__button">Get to know the rest</button>
+                    <a class="button pets__button" href="pets.html">Get to know the rest</a>
                 </div>
             </section>
             <section id="help" class="help">
@@ -309,10 +314,10 @@
     </main>
     <footer id="contacts" class="footer bg-texture">
         <div class="container footer__container">
-            <address class="columns footer__columns">
+            <div class="columns footer__columns">
                 <div class="column footer__column">
                     <h2 class="title subtitle footer__title">For questions and suggestions</h2>
-                    <a class="footer__elem title card__title" href="mailto:email@shelter.com">
+                    <a class="footer__link title card__title" href="mailto:email@shelter.com">
                         <svg class="footer__icon" width="40" height="32" viewbox="0 0 40 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -324,7 +329,7 @@
                         </svg>
                         email@shelter.com
                     </a>
-                    <a class="footer__elem title card__title" href="tel:136745677554">
+                    <a class="footer__link title card__title" href="tel:136745677554">
                         <svg class="footer__icon" width="40" height="32" viewbox="0 0 40 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -345,7 +350,7 @@
                 </div>
                 <div class="column footer__column">
                     <h2 class="title subtitle footer__title">We are waiting for your visit</h2>
-                    <a class="footer__elem footer__address title card__title" target="_blank"
+                    <a class="footer__link footer__address title card__title" target="_blank"
                         href="https://www.google.com/maps/search/1+Central+Street,+Boston/">
                         <svg class="footer__icon" width="22" height="32" viewbox="0 0 22 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -358,7 +363,7 @@
                         </svg>
                         1 Central Street, Boston (entrance from the store)
                     </a>
-                    <a class="footer__elem title card__title" target="_blank"
+                    <a class="footer__link title card__title" target="_blank"
                         href="https://www.google.com/maps/search/18+South+Park,+London/">
                         <svg class="footer__icon" width="22" height="32" viewbox="0 0 22 32" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
@@ -375,7 +380,7 @@
                 <div class="column footer__column">
                     <img class="footer__img" src="assets/images/footer/puppy.png" alt="Puppy">
                 </div>
-            </address>
+            </div>
         </div>
     </footer>
 </body>

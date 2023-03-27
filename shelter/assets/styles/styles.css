@@ -27,7 +27,6 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2.25rem;
 }
 
 .bg-texture {
@@ -84,26 +83,41 @@ html {
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 3.6rem;
   list-style: none;
 }
 .nav-list__link {
+  position: relative;
   color: var(--color-dark-s, hsl(0, 0%, 80%));
   font-size: 1.5rem;
   line-height: 1.6;
   text-decoration: none;
   display: block;
-  padding: 1rem 1.75rem 1.4rem;
+  padding-bottom: 0.4rem;
 }
-.nav-list__link:focus:active {
+.nav-list__link:not(.nav-list__link_active):focus:active {
   color: var(--color-light-s, hsl(0, 0%, 98%));
+}
+.nav-list__link_active {
+  cursor: default;
+  pointer-events: none;
+}
+.nav-list__link_active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--color-primary, hsl(25, 69%, 82%));
 }
 .nav-list__link_white-ver {
   color: var(--color-dark-l, hsl(0, 0%, 33%));
 }
-.nav-list__link_white-ver:hover {
+.nav-list__link_white-ver:not(.nav-list__link_active):hover {
   color: var(--color-dark-3xl, hsl(0, 0%, 16%));
 }
-.nav-list__link_white-ver:focus:active {
+.nav-list__link_white-ver:not(.nav-list__link_active):focus:active {
   color: inherit;
 }
 
@@ -174,6 +188,9 @@ html {
   margin-top: 4rem;
   margin-bottom: 4.4rem;
   color: var(--color-dark-s, hsl(0, 0%, 80%));
+}
+.start__button {
+  text-decoration: none;
 }
 .about__container {
   padding-left: 21.6rem;
@@ -250,6 +267,10 @@ html {
   border-radius: 0.9rem;
   background-color: var(--color-light-s, hsl(0, 0%, 98%));
 }
+.pets__button {
+  text-decoration: none;
+}
+
 .help__container {
   padding-top: 8rem;
   padding-bottom: 10rem;
@@ -277,7 +298,7 @@ html {
 }
 .donation__container {
   padding-top: 8rem;
-  padding-bottom: 10rem;
+  padding-bottom: 9.9rem;
 }
 .donation__columns {
   gap: 6rem 3rem;
@@ -287,14 +308,13 @@ html {
 }
 .donation__column {
   max-width: 38rem;
-  gap: 1.9rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 .donation__title {
   max-width: 30rem;
 }
 .donation__subtitle {
-  margin-bottom: 0.2rem;
   font-size: 1.5rem;
   line-height: 1.1;
 }
@@ -314,6 +334,10 @@ html {
   border-radius: 0.9rem;
   text-decoration: none;
   background-color: var(--color-primary, hsl(25, 69%, 82%));
+  transition: all 0.3s ease-in-out;
+}
+.credit-card:hover {
+  background-color: var(--color-primary-light, hsl(25, 93%, 88%));
 }
 .footer__container {
   padding-top: 4rem;
@@ -333,12 +357,19 @@ html {
   gap: 0;
   padding-right: 1.5rem;
 }
-.footer__elem {
+.footer__link {
   gap: 2rem;
   display: flex;
   align-items: center;
   color: var(--color-primary, hsl(25, 69%, 82%));
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.footer__link:hover {
+  color: var(--color-dark-s, hsl(0, 0%, 80%));
+}
+.footer__link:hover .footer__icon > path {
+  fill: var(--color-dark-s, hsl(0, 0%, 80%));
 }
 .footer__title {
   color: var(--color-light-xl, hsl(0, 0%, 100%));
@@ -349,4 +380,7 @@ html {
 }
 .footer__icon {
   flex-shrink: 0;
+}
+.footer__icon > path {
+  transition: all 0.3s ease-in-out;
 }/*# sourceMappingURL=styles.css.map */
