@@ -386,10 +386,26 @@ html {
         border-radius: 0.9rem;
 
         background-color: var(--color-light-s, hsla(0, 0%, 98%, 1));
+
+        &:hover {
+            cursor: pointer;
+
+            &:hover>button {
+                background-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
+                border-color: var(--color-primary-light, hsla(25, 93%, 88%, 1));
+            }
+        }
     }
 
     &__button {
         text-decoration: none;
+    }
+
+    .pagination>&__button {
+        text-align: center;
+
+        font-size: 2rem;
+        line-height: 1.15;
     }
 }
 
