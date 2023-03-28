@@ -267,8 +267,20 @@ html {
   border-radius: 0.9rem;
   background-color: var(--color-light-s, hsl(0, 0%, 98%));
 }
+.pets__card:hover {
+  cursor: pointer;
+}
+.pets__card:hover:hover > button {
+  background-color: var(--color-primary-light, hsl(25, 93%, 88%));
+  border-color: var(--color-primary-light, hsl(25, 93%, 88%));
+}
 .pets__button {
   text-decoration: none;
+}
+.pagination > .pets__button {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.15;
 }
 
 .help__container {
