@@ -36,6 +36,9 @@ html {
 }
 
 .header {
+    position: absolute;
+    width: 100%;
+
     display: flex;
     justify-content: center;
 
@@ -48,8 +51,9 @@ html {
 
 .bg-texture {
     background:
-        url("../images/texture/bg-texture.png"),
-        radial-gradient(var(--color-gradient-start, hsla(25, 22%, 29%, 1)), var(--color-gradient-end, hsla(330, 3%, 15%, 1)));
+        url("../images/texture/bg-texture.png") 110%,
+        radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsla(25, 22%, 29%, 1)) 0%, var(--color-gradient-end, hsla(330, 3%, 15%, 1)) 100%);
+
 }
 
 .title {
@@ -132,8 +136,11 @@ html {
             display: block;
 
             padding-bottom: 0.4rem;
+            transition: all 0.3s ease-in-out;
 
-            &:not(.nav-list__link_active):focus:active {
+            &:hover,
+            &:active,
+            &_active {
                 color: var(--color-light-s, hsla(0, 0%, 98%, 1));
             }
 
@@ -153,8 +160,6 @@ html {
                     background-color: var(--color-primary, hsla(25, 69%, 82%, 1));
                 }
             }
-
-
 
             &_white-ver {
                 color: var(--color-dark-l, hsla(0, 0%, 33%, 1));
@@ -237,6 +242,7 @@ html {
 .start {
     &__container {
         padding-bottom: 0;
+        padding-top: 15rem;
     }
 
     &__columns {
@@ -358,6 +364,10 @@ html {
         align-items: center;
 
         gap: 6rem;
+
+        &_our-pets {
+            padding-top: 20rem;
+        }
     }
 
     &__grid {
