@@ -25,13 +25,13 @@ html {
   display: flex;
   justify-content: center;
 }
+.header_white-ver {
+  background-color: var(--color-light-xl, hsl(0, 0%, 100%));
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.header__container_white-ver {
-  background-color: var(--color-light-xl, hsl(0, 0%, 100%));
 }
 
 .bg-texture {
@@ -409,7 +409,7 @@ html {
 @media screen and (max-width: 80em) {
   .container {
     margin: 0;
-    max-width: 76.8rem;
+    min-width: 76.8rem;
   }
   .header__container {
     padding: 3rem;
