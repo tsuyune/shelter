@@ -584,3 +584,52 @@ html {
 
     &__img {}
 }
+
+@media screen and (max-width: 80em) {
+    .container {
+        margin: auto;
+
+        max-width: 80rem;
+    }
+
+    .header {
+        &__container {
+            padding: 3rem;
+        }
+    }
+
+    .start {
+        &__container {
+            padding: 15rem 3rem 0 0;
+        }
+
+        &__columns {
+            padding-top: 0;
+            flex-direction: column;
+
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__column {
+            padding-top: 0;
+            padding-bottom: 10rem;
+
+            justify-content: center;
+        }
+
+        &__button {
+            align-self: center;
+        }
+
+        &__img {
+            margin-right: 3rem;
+
+            width: 56.9rem;
+            height: 59.3rem;
+
+            align-self: end;
+        }
+    }
+}

@@ -402,4 +402,37 @@ html {
 }
 .footer__icon > path {
   transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 80em) {
+  .container {
+    margin: auto;
+    max-width: 80rem;
+  }
+  .header__container {
+    padding: 3rem;
+  }
+  .start__container {
+    padding: 15rem 3rem 0 0;
+  }
+  .start__columns {
+    padding-top: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .start__column {
+    padding-top: 0;
+    padding-bottom: 10rem;
+    justify-content: center;
+  }
+  .start__button {
+    align-self: center;
+  }
+  .start__img {
+    margin-right: 3rem;
+    width: 56.9rem;
+    height: 59.3rem;
+    align-self: end;
+  }
 }/*# sourceMappingURL=styles.css.map */
