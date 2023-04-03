@@ -46,6 +46,10 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &_white-ver {
+            background-color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+        }
     }
 }
 
@@ -53,7 +57,6 @@ html {
     background:
         url("../images/texture/bg-texture.png") 110%,
         radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsla(25, 22%, 29%, 1)) 0%, var(--color-gradient-end, hsla(330, 3%, 15%, 1)) 100%);
-
 }
 
 .title {
@@ -651,6 +654,11 @@ html {
     .pets {
         &__container {
             padding: 8rem 3rem 10rem;
+
+            &_our-pets {
+                padding: 20rem 0 7.6rem;
+                gap: 3rem;
+            }
         }
 
         &__cards {
@@ -659,6 +667,21 @@ html {
             }
 
             gap: 4rem;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, minmax(27rem, 1fr));
+
+            &>.pets__card:nth-child(7),
+            .pets__card:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .pagination {
+        &__container {
+            padding-top: 1rem;
         }
     }
 
