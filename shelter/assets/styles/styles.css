@@ -435,4 +435,22 @@ html {
     height: 59.3rem;
     align-self: end;
   }
+  .about__container {
+    padding: 1.7rem 3rem 10rem 0;
+  }
+  .about__columns {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6.5rem;
+  }
+  .pets__container {
+    padding: 8rem 6rem 10rem 3rem;
+  }
+  .pets__cards {
+    gap: 4rem;
+  }
+  .pets__cards > :last-child {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
