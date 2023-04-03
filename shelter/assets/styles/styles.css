@@ -499,16 +499,4 @@ html {
   .footer__img {
     margin-right: 2rem;
   }
-}
-@media screen and (max-width: 48em) {
-  .container {
-    margin: 0;
-    max-width: 76.8rem;
-  }
-  .nav-list {
-    display: none;
-  }
-  .header__container {
-    padding: 3rem 2rem;
-  }
 }/*# sourceMappingURL=styles.css.map */
