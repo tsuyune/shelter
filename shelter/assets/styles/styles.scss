@@ -587,9 +587,9 @@ html {
 
 @media screen and (max-width: 80em) {
     .container {
-        margin: auto;
+        margin: 0;
 
-        max-width: 80rem;
+        max-width: 76.8rem;
     }
 
     .header {
@@ -601,7 +601,7 @@ html {
     .start {
         &__container {
             margin: 0;
-            padding: 15rem 3rem 0 0;
+            padding: 15rem 0 0 0;
         }
 
         &__columns {
@@ -636,7 +636,7 @@ html {
 
     .about {
         &__container {
-            padding: 1.7rem 3rem 10rem 0;
+            padding: 1.7rem 0 10rem;
         }
 
         &__columns {
@@ -650,7 +650,7 @@ html {
 
     .pets {
         &__container {
-            padding: 8rem 6rem 10rem 3rem;
+            padding: 8rem 3rem 10rem;
         }
 
         &__cards {
@@ -664,7 +664,7 @@ html {
 
     .help {
         &__container {
-            padding: 8rem 3rem 10rem 0;
+            padding: 8rem 0 10rem;
         }
 
         &__cards {
@@ -677,6 +677,34 @@ html {
 
         &__card {
             width: 17rem;
+        }
+    }
+
+    .donation {
+        &__container {
+            padding: 7.9rem 0 10rem;
+        }
+    }
+
+    .footer {
+        &__container {
+            padding: 1.2rem 4.3rem 0 6.3rem;
+        }
+
+        &__columns {
+            gap: 6.3rem 2rem;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        &__column {
+            max-width: 32rem;
+        }
+
+        &__img {
+            margin-right: 2rem;
         }
     }
 }

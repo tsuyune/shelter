@@ -405,15 +405,15 @@ html {
 }
 @media screen and (max-width: 80em) {
   .container {
-    margin: auto;
-    max-width: 80rem;
+    margin: 0;
+    max-width: 76.8rem;
   }
   .header__container {
     padding: 3rem;
   }
   .start__container {
     margin: 0;
-    padding: 15rem 3rem 0 0;
+    padding: 15rem 0 0 0;
   }
   .start__columns {
     padding-top: 0;
@@ -437,7 +437,7 @@ html {
     align-self: end;
   }
   .about__container {
-    padding: 1.7rem 3rem 10rem 0;
+    padding: 1.7rem 0 10rem;
   }
   .about__columns {
     flex-wrap: wrap;
@@ -446,7 +446,7 @@ html {
     gap: 6.5rem;
   }
   .pets__container {
-    padding: 8rem 6rem 10rem 3rem;
+    padding: 8rem 3rem 10rem;
   }
   .pets__cards {
     gap: 4rem;
@@ -455,7 +455,7 @@ html {
     display: none;
   }
   .help__container {
-    padding: 8rem 3rem 10rem 0;
+    padding: 8rem 0 10rem;
   }
   .help__cards {
     max-width: 63rem;
@@ -464,5 +464,22 @@ html {
   }
   .help__card {
     width: 17rem;
+  }
+  .donation__container {
+    padding: 7.9rem 0 10rem;
+  }
+  .footer__container {
+    padding: 1.2rem 4.3rem 0 6.3rem;
+  }
+  .footer__columns {
+    gap: 6.3rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__column {
+    max-width: 32rem;
+  }
+  .footer__img {
+    margin-right: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
