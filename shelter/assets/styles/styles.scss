@@ -46,6 +46,10 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &_white-ver {
+            background-color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+        }
     }
 }
 
@@ -53,7 +57,6 @@ html {
     background:
         url("../images/texture/bg-texture.png") 110%,
         radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsla(25, 22%, 29%, 1)) 0%, var(--color-gradient-end, hsla(330, 3%, 15%, 1)) 100%);
-
 }
 
 .title {
@@ -583,4 +586,148 @@ html {
     }
 
     &__img {}
+}
+
+@media screen and (max-width: 80em) {
+    .container {
+        margin: 0;
+
+        max-width: 76.8rem;
+    }
+
+    .header {
+        &__container {
+            padding: 3rem;
+        }
+    }
+
+    .start {
+        &__container {
+            margin: 0;
+            padding: 15rem 0 0 0;
+        }
+
+        &__columns {
+            padding-top: 0;
+            flex-direction: column;
+
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__column {
+            padding-top: 0;
+            padding-bottom: 10rem;
+
+            justify-content: center;
+        }
+
+        &__button {
+            align-self: center;
+        }
+
+        &__img {
+            margin-right: 3rem;
+
+            width: 56.9rem;
+            height: 59.3rem;
+
+            align-self: end;
+        }
+    }
+
+    .about {
+        &__container {
+            padding: 1.7rem 0 10rem;
+        }
+
+        &__columns {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+
+            align-items: center;
+            gap: 6.5rem;
+        }
+    }
+
+    .pets {
+        &__container {
+            padding: 8rem 3rem 10rem;
+
+            &_our-pets {
+                padding: 20rem 0 7.6rem;
+                gap: 3rem;
+            }
+        }
+
+        &__cards {
+            &> :last-child {
+                display: none;
+            }
+
+            gap: 4rem;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, minmax(27rem, 1fr));
+
+            &>.pets__card:nth-child(7),
+            .pets__card:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .pagination {
+        &__container {
+            padding-top: 1rem;
+        }
+    }
+
+    .help {
+        &__container {
+            padding: 8rem 0 10rem;
+        }
+
+        &__cards {
+            max-width: 63rem;
+
+            justify-content: space-between;
+
+            gap: 5.3rem;
+        }
+
+        &__card {
+            width: 17rem;
+        }
+    }
+
+    .donation {
+        &__container {
+            padding: 7.9rem 0 10rem;
+        }
+    }
+
+    .footer {
+        &__container {
+            padding: 1.2rem 4.3rem 0 6.3rem;
+        }
+
+        &__columns {
+            gap: 6.3rem 2rem;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+        }
+
+        &__column {
+            max-width: 32rem;
+        }
+
+        &__img {
+            margin-right: 2rem;
+        }
+    }
 }

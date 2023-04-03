@@ -30,6 +30,9 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+.header__container_white-ver {
+  background-color: var(--color-light-xl, hsl(0, 0%, 100%));
+}
 
 .bg-texture {
   background: url("../images/texture/bg-texture.png") 110%, radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsl(25, 22%, 29%)) 0%, var(--color-gradient-end, hsl(330, 3%, 15%)) 100%);
@@ -402,4 +405,98 @@ html {
 }
 .footer__icon > path {
   transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 80em) {
+  .container {
+    margin: 0;
+    max-width: 76.8rem;
+  }
+  .header__container {
+    padding: 3rem;
+  }
+  .start__container {
+    margin: 0;
+    padding: 15rem 0 0 0;
+  }
+  .start__columns {
+    padding-top: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .start__column {
+    padding-top: 0;
+    padding-bottom: 10rem;
+    justify-content: center;
+  }
+  .start__button {
+    align-self: center;
+  }
+  .start__img {
+    margin-right: 3rem;
+    width: 56.9rem;
+    height: 59.3rem;
+    align-self: end;
+  }
+  .about__container {
+    padding: 1.7rem 0 10rem;
+  }
+  .about__columns {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6.5rem;
+  }
+  .pets__container {
+    padding: 8rem 3rem 10rem;
+  }
+  .pets__container_our-pets {
+    padding: 20rem 0 7.6rem;
+    gap: 3rem;
+  }
+  .pets__cards {
+    gap: 4rem;
+  }
+  .pets__cards > :last-child {
+    display: none;
+  }
+  .pets__grid {
+    grid-template-columns: repeat(2, minmax(27rem, 1fr));
+  }
+  .pets__grid > .pets__card:nth-child(7),
+  .pets__grid .pets__card:last-child {
+    display: none;
+  }
+  .pagination__container {
+    padding-top: 1rem;
+  }
+  .help__container {
+    padding: 8rem 0 10rem;
+  }
+  .help__cards {
+    max-width: 63rem;
+    justify-content: space-between;
+    gap: 5.3rem;
+  }
+  .help__card {
+    width: 17rem;
+  }
+  .donation__container {
+    padding: 7.9rem 0 10rem;
+  }
+  .footer__container {
+    padding: 1.2rem 4.3rem 0 6.3rem;
+  }
+  .footer__columns {
+    gap: 6.3rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__column {
+    max-width: 32rem;
+  }
+  .footer__img {
+    margin-right: 2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
