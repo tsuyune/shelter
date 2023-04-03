@@ -412,6 +412,7 @@ html {
     padding: 3rem;
   }
   .start__container {
+    margin: 0;
     padding: 15rem 3rem 0 0;
   }
   .start__columns {
@@ -452,5 +453,16 @@ html {
   }
   .pets__cards > :last-child {
     display: none;
+  }
+  .help__container {
+    padding: 8rem 3rem 10rem 0;
+  }
+  .help__cards {
+    max-width: 63rem;
+    justify-content: space-between;
+    gap: 5.3rem;
+  }
+  .help__card {
+    width: 17rem;
   }
 }/*# sourceMappingURL=styles.css.map */
