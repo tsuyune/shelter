@@ -42,14 +42,14 @@ html {
     display: flex;
     justify-content: center;
 
+    &_white-ver {
+        background-color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
+    }
+
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        &_white-ver {
-            background-color: var(--color-light-xl, hsla(0, 0%, 100%, 1));
-        }
     }
 }
 
@@ -592,7 +592,7 @@ html {
     .container {
         margin: 0;
 
-        max-width: 76.8rem;
+        min-width: 76.8rem;
     }
 
     .header {
