@@ -34,6 +34,10 @@ html {
   align-items: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .bg-texture {
   background: url("../images/texture/bg-texture.png") 110%, radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsl(25, 22%, 29%)) 0%, var(--color-gradient-end, hsl(330, 3%, 15%)) 100%);
 }
@@ -406,13 +410,17 @@ html {
 .footer__icon > path {
   transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 80em) {
+@media screen and (max-width: 79.9375em) {
   .container {
     margin: 0;
-    max-width: 76.8rem;
+    min-width: 76.8rem;
   }
   .header__container {
     padding: 3rem;
+  }
+  .start {
+    display: flex;
+    justify-content: center;
   }
   .start__container {
     margin: 0;
@@ -439,6 +447,10 @@ html {
     height: 59.3rem;
     align-self: end;
   }
+  .about {
+    display: flex;
+    justify-content: center;
+  }
   .about__container {
     padding: 1.7rem 0 10rem;
   }
@@ -447,6 +459,10 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     gap: 6.5rem;
+  }
+  .pets {
+    display: flex;
+    justify-content: center;
   }
   .pets__container {
     padding: 8rem 3rem 10rem;
@@ -471,6 +487,10 @@ html {
   .pagination__container {
     padding-top: 1rem;
   }
+  .help {
+    display: flex;
+    justify-content: center;
+  }
   .help__container {
     padding: 8rem 0 10rem;
   }
@@ -482,8 +502,16 @@ html {
   .help__card {
     width: 17rem;
   }
+  .donation {
+    display: flex;
+    justify-content: center;
+  }
   .donation__container {
     padding: 7.9rem 0 10rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
   }
   .footer__container {
     padding: 1.2rem 4.3rem 0 6.3rem;

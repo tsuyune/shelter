@@ -53,6 +53,10 @@ html {
     }
 }
 
+.burger-menu {
+    display: none;
+}
+
 .bg-texture {
     background:
         url("../images/texture/bg-texture.png") 110%,
@@ -588,11 +592,11 @@ html {
     &__img {}
 }
 
-@media screen and (max-width: 80em) {
+@media screen and (max-width: 79.9375em) {
     .container {
         margin: 0;
 
-        max-width: 76.8rem;
+        min-width: 76.8rem;
     }
 
     .header {
@@ -602,6 +606,9 @@ html {
     }
 
     .start {
+        display: flex;
+        justify-content: center;
+
         &__container {
             margin: 0;
             padding: 15rem 0 0 0;
@@ -638,6 +645,9 @@ html {
     }
 
     .about {
+        display: flex;
+        justify-content: center;
+
         &__container {
             padding: 1.7rem 0 10rem;
         }
@@ -652,6 +662,9 @@ html {
     }
 
     .pets {
+        display: flex;
+        justify-content: center;
+
         &__container {
             padding: 8rem 3rem 10rem;
 
@@ -686,6 +699,9 @@ html {
     }
 
     .help {
+        display: flex;
+        justify-content: center;
+
         &__container {
             padding: 8rem 0 10rem;
         }
@@ -704,12 +720,18 @@ html {
     }
 
     .donation {
+        display: flex;
+        justify-content: center;
+
         &__container {
             padding: 7.9rem 0 10rem;
         }
     }
 
     .footer {
+        display: flex;
+        justify-content: center;
+
         &__container {
             padding: 1.2rem 4.3rem 0 6.3rem;
         }
