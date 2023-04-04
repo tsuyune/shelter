@@ -514,18 +514,18 @@ html {
     justify-content: center;
   }
   .footer__container {
-    padding: 1.2rem 4.3rem 0 6.3rem;
+    padding: 1.3rem 4.7rem 0 5.6rem;
   }
   .footer__columns {
-    gap: 6.3rem 2rem;
+    gap: 6.2rem 3rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   .footer__column {
-    max-width: 32rem;
+    max-width: 31rem;
   }
   .footer__img {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 @media screen and (max-width: 47.9375em) {
