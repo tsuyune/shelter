@@ -754,6 +754,7 @@ html {
         }
     }
 }
+
 // responsive layout for mobile phones (320px to 767px)
 @media screen and (max-width: 47.9375em) {
     .container {
@@ -783,6 +784,10 @@ html {
 
     .burger-menu {
         display: block;
+
+        &_white-ver line {
+            stroke: #000;
+        }
     }
 
     .logo {
@@ -838,6 +843,10 @@ html {
             padding: 4.2rem 2.5rem 4.3rem;
 
             gap: 4.1rem;
+
+            &_our-pets {
+                padding-top: 16.2rem;
+            }
         }
 
         &__cards {
@@ -856,6 +865,23 @@ html {
             &> :nth-child(2) {
                 order: -1;
             }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(1, minmax(27rem, 1fr));
+
+            &>.pets__card:nth-child(4),
+            &>.pets__card:nth-child(5),
+            &>.pets__card:nth-child(6) {
+                display: none;
+            }
+        }
+    }
+
+    .pagination {
+        gap: 1rem;
+        &__container {
+            padding-top: 0.2rem;
         }
     }
 

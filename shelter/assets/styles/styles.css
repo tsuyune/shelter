@@ -550,6 +550,9 @@ html {
   .burger-menu {
     display: block;
   }
+  .burger-menu_white-ver line {
+    stroke: #000;
+  }
   .logo__title {
     font-size: 3.2rem;
     line-height: 1.1;
@@ -582,6 +585,9 @@ html {
     padding: 4.2rem 2.5rem 4.3rem;
     gap: 4.1rem;
   }
+  .pets__container_our-pets {
+    padding-top: 16.2rem;
+  }
   .pets__cards > :nth-child(2) {
     display: none;
   }
@@ -593,6 +599,18 @@ html {
   }
   .pets__carousel > :nth-child(2) {
     order: -1;
+  }
+  .pets__grid {
+    grid-template-columns: repeat(1, minmax(27rem, 1fr));
+  }
+  .pets__grid > .pets__card:nth-child(4), .pets__grid > .pets__card:nth-child(5), .pets__grid > .pets__card:nth-child(6) {
+    display: none;
+  }
+  .pagination {
+    gap: 1rem;
+  }
+  .pagination__container {
+    padding-top: 0.2rem;
   }
   .help__container {
     padding: 4.2rem 1.5rem 4.3rem;
