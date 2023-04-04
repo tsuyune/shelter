@@ -34,6 +34,10 @@ html {
   align-items: center;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .bg-texture {
   background: url("../images/texture/bg-texture.png") 110%, radial-gradient(100% 215.42% at 0% 0%, var(--color-gradient-start, hsl(25, 22%, 29%)) 0%, var(--color-gradient-end, hsl(330, 3%, 15%)) 100%);
 }
@@ -406,13 +410,17 @@ html {
 .footer__icon > path {
   transition: all 0.3s ease-in-out;
 }
-@media screen and (max-width: 80em) {
+@media screen and (max-width: 79.9375em) {
   .container {
     margin: 0;
-    max-width: 76.8rem;
+    min-width: 76.8rem;
   }
   .header__container {
     padding: 3rem;
+  }
+  .start {
+    display: flex;
+    justify-content: center;
   }
   .start__container {
     margin: 0;
@@ -439,6 +447,10 @@ html {
     height: 59.3rem;
     align-self: end;
   }
+  .about {
+    display: flex;
+    justify-content: center;
+  }
   .about__container {
     padding: 1.7rem 0 10rem;
   }
@@ -447,6 +459,10 @@ html {
     flex-direction: column-reverse;
     align-items: center;
     gap: 6.5rem;
+  }
+  .pets {
+    display: flex;
+    justify-content: center;
   }
   .pets__container {
     padding: 8rem 3rem 10rem;
@@ -471,6 +487,10 @@ html {
   .pagination__container {
     padding-top: 1rem;
   }
+  .help {
+    display: flex;
+    justify-content: center;
+  }
   .help__container {
     padding: 8rem 0 10rem;
   }
@@ -482,8 +502,16 @@ html {
   .help__card {
     width: 17rem;
   }
+  .donation {
+    display: flex;
+    justify-content: center;
+  }
   .donation__container {
     padding: 7.9rem 0 10rem;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
   }
   .footer__container {
     padding: 1.2rem 4.3rem 0 6.3rem;
@@ -498,5 +526,155 @@ html {
   }
   .footer__img {
     margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 47.9375em) {
+  .container {
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width: 20rem;
+  }
+  .title {
+    font-size: 2.5rem;
+    line-height: 1.28;
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .header__container {
+    padding: 3rem 2rem;
+  }
+  .nav-list {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .logo__title {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    text-align: left;
+  }
+  .start__text {
+    text-align: center;
+  }
+  .start__img {
+    width: 26rem;
+    height: 27.177rem;
+    margin-right: 0;
+    margin-top: 0.6rem;
+  }
+  .about__container {
+    padding: 2.7rem 2.5rem 4.3rem;
+  }
+  .about__columns {
+    padding-top: 0;
+    gap: 2.5rem;
+  }
+  .about__img {
+    width: 26rem;
+    height: 35.36rem;
+  }
+  .about__text {
+    text-align: justify;
+  }
+  .pets__container {
+    padding: 4.2rem 2.5rem 4.3rem;
+    gap: 4.1rem;
+  }
+  .pets__cards > :nth-child(2) {
+    display: none;
+  }
+  .pets__carousel {
+    gap: 2rem 8rem;
+    padding-bottom: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pets__carousel > :nth-child(2) {
+    order: -1;
+  }
+  .help__container {
+    padding: 4.2rem 1.5rem 4.3rem;
+    gap: 4.2rem;
+  }
+  .help__cards {
+    gap: 3rem 0;
+  }
+  .help__card {
+    width: 13rem;
+  }
+  .help .card {
+    gap: 1.8rem;
+  }
+  .card__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+  .help .card__title {
+    font-size: 1.5rem;
+    line-height: 1.134;
+  }
+  .pets .card__title {
+    font-size: 2rem;
+    line-height: 1.136;
+  }
+  .donation__container {
+    padding: 4.2rem 2rem 4.3rem;
+  }
+  .donation__columns {
+    gap: 4.3rem;
+  }
+  .donation__column {
+    gap: 1.8rem;
+    align-items: center;
+  }
+  .donation__subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: normal;
+    white-space: nowrap;
+  }
+  .donation__text {
+    text-align: justify;
+  }
+  .donation__img {
+    width: 26rem;
+    height: 13.52rem;
+  }
+  .credit-card {
+    margin-top: 0.2rem;
+  }
+  .credit-card .card__title {
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  .footer__container {
+    padding: 1.4rem 1rem 0;
+  }
+  .footer__columns {
+    gap: 2rem;
+  }
+  .footer__column:nth-child(2) {
+    gap: 0.5rem;
+    padding-right: 0;
+  }
+  .footer__column:nth-child(2) .footer__link {
+    align-self: start;
+    text-align: left;
+  }
+  .footer__address {
+    padding-bottom: 3.4rem;
+  }
+  .footer__link {
+    font-size: 2rem;
+    line-height: 1.15;
+    align-self: center;
+  }
+  .footer__img {
+    width: 26rem;
+    height: 26.9rem;
+    margin-right: 0;
+    margin-top: 1.9rem;
   }
 }/*# sourceMappingURL=styles.css.map */
