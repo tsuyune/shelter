@@ -593,7 +593,7 @@ html {
 }
 
 // responsive layout for tablets (768px to 1279px)
-@media screen and (max-width: 79.9375em) {
+@media screen and (max-width: 79.96875em) {
     .container {
         margin: 0;
 
@@ -755,8 +755,17 @@ html {
     }
 }
 
+// Three-column grid for pets page - responsive layout for tablets (1000px to 1279px)
+@media screen and (min-width: 62.5em) and (max-width: 79.96875em) {
+    .pets {
+        &__grid {
+            grid-template-columns: repeat(3, minmax(27rem, 1fr));
+        }
+    }
+}
+
 // responsive layout for mobile phones (320px to 767px)
-@media screen and (max-width: 47.9375em) {
+@media screen and (max-width: 47.96875em) {
     .container {
         margin: 0;
         padding-left: 1rem;
@@ -802,7 +811,9 @@ html {
     .start {
         &__container {}
 
-        &__column {}
+        &__column {
+            align-items: center;
+        }
 
         &__text {
             text-align: center;
@@ -826,6 +837,10 @@ html {
             padding-top: 0;
 
             gap: 2.5rem;
+        }
+
+        &__column .about__title {
+            margin: auto;
         }
 
         &__img {
@@ -864,6 +879,9 @@ html {
 
             &> :nth-child(2) {
                 order: -1;
+                flex-basis: 100%;
+
+                justify-content: center;
             }
         }
 
@@ -880,6 +898,7 @@ html {
 
     .pagination {
         gap: 1rem;
+
         &__container {
             padding-top: 0.2rem;
         }
@@ -984,6 +1003,12 @@ html {
             }
         }
 
+        &__column:last-child {
+            flex-basis: 100%;
+
+            margin-top: 1.9rem;
+        }
+
         &__address {
             padding-bottom: 3.4rem;
         }
@@ -999,8 +1024,7 @@ html {
             width: 26rem;
             height: 26.9rem;
 
-            margin-right: 0;
-            margin-top: 1.9rem;
+            margin: auto;
         }
     }
 }
