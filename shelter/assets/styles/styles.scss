@@ -592,6 +592,7 @@ html {
     &__img {}
 }
 
+// responsive layout for tablets (768px to 1279px)
 @media screen and (max-width: 79.9375em) {
     .container {
         margin: 0;
@@ -733,11 +734,11 @@ html {
         justify-content: center;
 
         &__container {
-            padding: 1.2rem 4.3rem 0 6.3rem;
+            padding: 1.3rem 4.7rem 0 5.6rem;
         }
 
         &__columns {
-            gap: 6.3rem 2rem;
+            gap: 6.2rem 3rem;
 
             flex-wrap: wrap;
 
@@ -745,15 +746,16 @@ html {
         }
 
         &__column {
-            max-width: 32rem;
+            max-width: 31rem;
         }
 
         &__img {
-            margin-right: 2rem;
+            margin-right: 1rem;
         }
     }
 }
 
+// responsive layout for mobile phones (320px to 767px)
 @media screen and (max-width: 47.9375em) {
     .container {
         margin: 0;
@@ -782,6 +784,10 @@ html {
 
     .burger-menu {
         display: block;
+
+        &_white-ver line {
+            stroke: #000;
+        }
     }
 
     .logo {
@@ -837,6 +843,10 @@ html {
             padding: 4.2rem 2.5rem 4.3rem;
 
             gap: 4.1rem;
+
+            &_our-pets {
+                padding-top: 16.2rem;
+            }
         }
 
         &__cards {
@@ -855,6 +865,23 @@ html {
             &> :nth-child(2) {
                 order: -1;
             }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(1, minmax(27rem, 1fr));
+
+            &>.pets__card:nth-child(4),
+            &>.pets__card:nth-child(5),
+            &>.pets__card:nth-child(6) {
+                display: none;
+            }
+        }
+    }
+
+    .pagination {
+        gap: 1rem;
+        &__container {
+            padding-top: 0.2rem;
         }
     }
 

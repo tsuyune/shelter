@@ -514,18 +514,18 @@ html {
     justify-content: center;
   }
   .footer__container {
-    padding: 1.2rem 4.3rem 0 6.3rem;
+    padding: 1.3rem 4.7rem 0 5.6rem;
   }
   .footer__columns {
-    gap: 6.3rem 2rem;
+    gap: 6.2rem 3rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   .footer__column {
-    max-width: 32rem;
+    max-width: 31rem;
   }
   .footer__img {
-    margin-right: 2rem;
+    margin-right: 1rem;
   }
 }
 @media screen and (max-width: 47.9375em) {
@@ -549,6 +549,9 @@ html {
   }
   .burger-menu {
     display: block;
+  }
+  .burger-menu_white-ver line {
+    stroke: #000;
   }
   .logo__title {
     font-size: 3.2rem;
@@ -582,6 +585,9 @@ html {
     padding: 4.2rem 2.5rem 4.3rem;
     gap: 4.1rem;
   }
+  .pets__container_our-pets {
+    padding-top: 16.2rem;
+  }
   .pets__cards > :nth-child(2) {
     display: none;
   }
@@ -593,6 +599,18 @@ html {
   }
   .pets__carousel > :nth-child(2) {
     order: -1;
+  }
+  .pets__grid {
+    grid-template-columns: repeat(1, minmax(27rem, 1fr));
+  }
+  .pets__grid > .pets__card:nth-child(4), .pets__grid > .pets__card:nth-child(5), .pets__grid > .pets__card:nth-child(6) {
+    display: none;
+  }
+  .pagination {
+    gap: 1rem;
+  }
+  .pagination__container {
+    padding-top: 0.2rem;
   }
   .help__container {
     padding: 4.2rem 1.5rem 4.3rem;
